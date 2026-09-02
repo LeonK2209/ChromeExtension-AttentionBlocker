@@ -1,0 +1,192 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  width: 300px;
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  background: #1a1a2e;
+  color: #eaeaea;
+}
+
+.container {
+  padding: 16px;
+}
+
+h1 {
+  font-size: 18px;
+  margin: 0 0 12px 0;
+  text-align: center;
+}
+
+h2 {
+  font-size: 13px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: #a0a0c0;
+  margin: 0 0 8px 0;
+}
+
+.status-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #16213e;
+  padding: 10px 12px;
+  border-radius: 8px;
+  margin-bottom: 16px;
+}
+
+.section {
+  margin-bottom: 16px;
+  background: #16213e;
+  padding: 12px;
+  border-radius: 8px;
+}
+
+/* Toggle Switch */
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 40px;
+  height: 22px;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #444;
+  transition: 0.3s;
+  border-radius: 22px;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 16px;
+  width: 16px;
+  left: 3px;
+  bottom: 3px;
+  background-color: white;
+  transition: 0.3s;
+  border-radius: 50%;
+}
+
+input:checked + .slider {
+  background-color: #e94560;
+}
+
+input:checked + .slider:before {
+  transform: translateX(18px);
+}
+
+/* Timer */
+#timerDisplay {
+  font-size: 28px;
+  text-align: center;
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: #e94560;
+}
+
+.timer-buttons {
+  display: flex;
+  gap: 6px;
+  margin-bottom: 8px;
+}
+
+.timer-buttons button {
+  flex: 1;
+  padding: 6px 0;
+  border: none;
+  border-radius: 6px;
+  background: #0f3460;
+  color: #eaeaea;
+  cursor: pointer;
+  font-size: 12px;
+}
+
+.timer-buttons button:hover {
+  background: #1a4a80;
+}
+
+.stop-btn {
+  width: 100%;
+  padding: 6px 0;
+  border: none;
+  border-radius: 6px;
+  background: transparent;
+  color: #e94560;
+  border: 1px solid #e94560;
+  cursor: pointer;
+  font-size: 12px;
+}
+
+.stop-btn:hover {
+  background: rgba(233, 69, 96, 0.1);
+}
+
+/* Blockliste */
+.add-domain-row {
+  display: flex;
+  gap: 6px;
+  margin-bottom: 8px;
+}
+
+.add-domain-row input {
+  flex: 1;
+  padding: 6px 8px;
+  border: none;
+  border-radius: 6px;
+  background: #0f3460;
+  color: #eaeaea;
+  font-size: 12px;
+}
+
+.add-domain-row button {
+  padding: 6px 12px;
+  border: none;
+  border-radius: 6px;
+  background: #e94560;
+  color: white;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+#domainList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  max-height: 120px;
+  overflow-y: auto;
+}
+
+#domainList li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 6px 8px;
+  background: #0f3460;
+  border-radius: 6px;
+  margin-bottom: 4px;
+  font-size: 12px;
+}
+
+#domainList li button {
+  background: transparent;
+  border: none;
+  color: #e94560;
+  cursor: pointer;
+  font-size: 14px;
+}

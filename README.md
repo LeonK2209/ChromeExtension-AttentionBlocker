@@ -14,7 +14,7 @@ Persönliches Projekt: Eine Chrome-Extension, die ablenkende Webseiten (z.B. You
 
 ## Projektstruktur
 ```
-ablenkblocker/
+AtentionBlocker/
 ├── manifest.json     # Metadaten & Permissions
 ├── background.js     # Service Worker, Timer-Logik im Hintergrund
 ├── popup.html         # UI beim Klick auf das Extension-Icon

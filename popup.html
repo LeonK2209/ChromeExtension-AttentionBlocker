@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <title>Ablenkblocker</title>
+  <link rel="stylesheet" href="popup.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>🚫 Ablenkblocker</h1>
+
+    <!-- Status & An/Aus -->
+    <div class="status-row">
+      <span id="statusText">Inaktiv</span>
+      <label class="switch">
+        <input type="checkbox" id="toggleActive" />
+        <span class="slider"></span>
+      </label>
+    </div>
+
+    <!-- Fokus-Timer -->
+    <div class="section">
+      <h2>Fokus-Timer</h2>
+      <div id="timerDisplay">--:--</div>
+      <div class="timer-buttons">
+        <button data-minutes="25" class="startTimerBtn">25 min</button>
+        <button data-minutes="45" class="startTimerBtn">45 min</button>
+        <button data-minutes="60" class="startTimerBtn">60 min</button>
+      </div>
+      <button id="stopTimerBtn" class="stop-btn">Timer stoppen</button>
+    </div>
+
+    <!-- Blockliste -->
+    <div class="section">
+      <h2>Blockliste</h2>
+      <div class="add-domain-row">
+        <input type="text" id="domainInput" placeholder="z.B. youtube.com" />
+        <button id="addDomainBtn">+</button>
+      </div>
+      <ul id="domainList"></ul>
+    </div>
+  </div>
+
+  <script src="popup.js"></script>
+</body>
+</html>
